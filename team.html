@@ -23,10 +23,10 @@ body {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
-
+    
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -39,7 +39,7 @@ body {font-family: "Lato", sans-serif}
 
     <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
 
-    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
+    <a href="" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
 
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">EVENTS <i class="fa fa-caret-down"></i></button>
@@ -74,50 +74,9 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <div class="w3-row w3-padding-24 w3-xlarge">
-      <h1 class="w3-wide w3-center">Johns Hopkins University ChemE-Car</h1>
-      <p class="w3-center">Applying Engineering Skills to Reality.</p>
+      <h1 class="w3-wide w3-center">Our Team</h1>
+      <p class="w3-center">Our team is composed of 3 sub-teams: Propulsion, Stopping and Chassis.</p>
   </div>
-
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/DSCF2045.JPG" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/DSCF2101.JPG" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/DSCF2092.JPG" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/Group (1).jpg" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/med-2.png" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/ChemE 1 (1).jpg" style="width:40%">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="./img/two.png" style="width:40%">
-  </div>
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide"> Brief Summary</h2>
-    <p class="w3-justify">The Chem-E-Car team focuses on designing and building a fully chemically controlled car. The interdepartmental team brings students of different backgrounds in mechanical, chemical and electrical engineering as well as computer science together to achieve a unifying goal. As a part of the American Institute of Chemical Engineers, team members get an opportunity to compete against other universities at the regional level and then national level at the annual AIChe Conferences that take place all over the nation. Join Chem-E-Car to become part of a dynamic team of engineers solving real world challenges!</p>
-
-
-  <div class="w3-row w3-padding-32">
-      <h2 class="w3-wide w3-center">    CONTACT</h2>
-      <i class="fa fa-id-badge" aria-hidden="true" style="width:30px"></i>Luis M. Rodriguez<br>
-      <div>
-        <i class="fa fa-map-marker" style="width:30px"></i> Baltimore, MD USA<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: lrodri29@jhu.edu<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Call: 786-838-5576<br>
-      </div>
-  </div>
-
-
 
 <!-- End Page Content -->
 </div>
@@ -129,32 +88,3 @@ body {font-family: "Lato", sans-serif}
 <footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
   <p class="w3-medium">© May, 2018 by L.M.R</p>
 </footer>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 4000);
-}
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-</body>
-</html>
