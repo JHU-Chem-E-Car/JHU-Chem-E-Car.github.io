@@ -26,7 +26,7 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
-    
+
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -42,11 +42,30 @@ body {font-family: "Lato", sans-serif}
     <a href="" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
 
     <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">REACTIONS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="reactions.html" class="w3-bar-item w3-button">Stopping: Iodine Clock</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Stopping: Hydrogen Decomposition</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Propulsion: Thermoelectric battery</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Propulsion: Aluminum-Air Battery</a>
+      </div>
+    </div>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">CARS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="cars.html" class="w3-bar-item w3-button">Fast and Ferrous</a>
+        <a href="cars.html" class="w3-bar-item w3-button">Ronny D-iesel</a>
+        <a href="cars.html" class="w3-bar-item w3-button">Rachel Reichner</a>
+      </div>
+    </div>
+
+    <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">EVENTS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="" class="w3-bar-item w3-button">Design Day 2017</a>
-        <a href="" class="w3-bar-item w3-button">AIChe Competition 2018</a>
-        <a href="" class="w3-bar-item w3-button">Design Day 2018</a>
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2017</a>
+        <a href="events.html" class="w3-bar-item w3-button">AIChe Competition 2018</a>
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2018</a>
       </div>
     </div>
 
@@ -58,24 +77,87 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
 
+    <div class="w3-bar-item w3-button w3-padding-medium w3-hide-small w3-right">
+      <a href="https://www.facebook.com/JHUChemECar/?ref=bookmarks" class="fa fa-facebook"></a>
+    </div>
+    <div class="w3-bar-item w3-button w3-padding-medium w3-hide-small w3-right">
+      <a href="#" class="fa fa-twitter"></a>
+    </div>
+    <div class="w3-bar-item w3-button w3-padding-medium w3-hide-small w3-right">
+      <a href="https://github.com/JHU-Chem-E-Car" class="fa fa-github"></a>
+    </div>
   </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="" class="w3-bar-item w3-button w3-padding-large w3-mobile">LINKS</a>
-    <a href="" class="w3-bar-item w3-button w3-padding-large w3-mobile">SCHEDULE</a>
-    <a href="" class="w3-bar-item w3-button w3-padding-large w3-mobile">TEAM</a>
-    <a href="" class="w3-bar-item w3-button w3-padding-large w3-mobile">EVENTS</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="links.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">LINKS</a>
+    <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">SCHEDULE</a>
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">TEAM</a>
+    <a href="reactions.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">REACTIONS</a>
+    <a href="cars.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">CARS</a>
+    <a href="events.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">EVENTS</a>
 </div>
 
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="w3-content w3-center" style="max-width:2000px;margin-top:46px">
 
-  <div class="w3-row w3-padding-24 w3-xlarge">
-      <h1 class="w3-wide w3-center">Our Team</h1>
-      <p class="w3-center">Our team is composed of 3 sub-teams: Propulsion, Stopping and Chassis.</p>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h1 class="w3-wide">Our Team</h1>
+      <img src="./img/Group (1).jpg" style="width:70%" align="center">
+      <p class="w3-justify">Our team is composed of 20 students with different science and engineering backgrounds. We have decided to distribute our skills and knowledge into three teams: Stopping, Propulsion and Chassis. The stopping team designs and investigates a stopping mechanism for the car using chemical reactions. The propulsion team uses electrochemistry to provide voltage for our car and our chassis team focuses on the integration of both stopping and propulsion.</p>
+
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <!-- Fall 2018 - Spring 2019-->
+        <h2 class="w3-wide"> Fall 2018-Spring 2019</h2>
+          <h3 class="w3-wide"> <b>Team Captains:</b></h3><a>Chris Lin & Daniel Xenes</a>
+
+          <h3 class="w3-wide"> <b>Stopping Team:</b></h3>
+            <p><i>Team Leaders:</i>Chris Domalewski, Casey Zhu</p>
+            <p><i>Members:</i> Tarush Gupta, Elizabeth McGonagle, Charles Ndiaye, Michael Shen </p>
+
+          <h3 class="w3-wide"> <b>Propulsion Team:</b></h3>
+            <p><i>Team Leaders:</i> Julian Jackson, Pragya Singh</p>
+            <p><i>Members: </i> Juan Sanfiel </p>
+
+          <h3 class="w3-wide"> <b>Chassis Team:</b></h3>
+            <p><i>Team Leader:</i> Gayatri Pillai</p>
+            <p><i>Members:</i> Hayden Good, Chris Lin</p>
+
+        <div>___________________________________________________</div>
+        <!-- Fall 2017 - Spring 2018-->
+        <h2 class="w3-wide"> Fall 2017-Spring 2018</h2>
+          <h3 class="w3-wide"> <b>Team Captain:</b></h3><a>Luis Rodriguez</a>
+
+          <h3 class="w3-wide"> <b>Stopping Team:</b></h3>
+            <p><i>Team Leaders:</i> Milena Nino, Daniel Xenes</p>
+            <p><i>Members:</i> Chris Domalewski, Tarush Gupta, Elizabeth McGonagle, Charles Ndiaye, Michael Shen, Casey Zhu </p>
+
+          <h3 class="w3-wide"> <b>Propulsion Team:</b></h3>
+            <p><i>Team Leaders:</i> Harsh Kapadia, Hieu (Henry) Tran</p>
+            <p><i>Members: </i> Michael Druckman, Julian Jackson, Gayatri Pillai, Juan Sanfiel, Pragya Singh </p>
+
+          <h3 class="w3-wide"> <b>Chassis Team:</b></h3>
+            <p><i>Team Leader:</i> Luis Rodriguez</p>
+            <p><i>Members:</i> Abraham Gomez, Hayden Good, Jessica Harsono, Chris Lin</p>
+      </div>
+
+      <div>___________________________________________________</div>
+      <!-- Fall 2017 - Spring 2018-->
+      <h2 class="w3-wide"> Staff</h2>
+        <h3 class="w3-wide"> <b>Advisor</b></h3><a> Lise Dahuron (PhD)</a>
+          <div> .</div>
+          <img src="https://engineering.jhu.edu/chembe/wp-content/uploads/sites/11/2013/10/Dahuron-681x1024.jpg" style="width:20%" align="center">
+          <p>Professor Dahuron serves as the ChemBE Director of Undergraduate Studies. Before joining the department, she was a Researcher in Corporate R&D for the Union Carbide Corporation for more than 20 years. She recently received the McDonald Award for Excellence in Mentoring and Advising, which recognizes engineering professionals who go above and beyond to support the personal and professional development of students. She earned her Ph.D. in Chemical Engineering from the University of Minnesota in 1987, and her Diplôme d’Ingénieur des Industries Chimiques from the Ecole Nationale Supérieure des Industries Chimiques (ENSIC) in 1982.
+            In addition, Dr. Dahuron has developed a unique senior capstone class called Product Process & Design to give ChemBE undergraduates a taste of what it’s like to work in industry as a chemical and biomolecular engineer. Past product ideas have included everything from new medical gels to flowers that change color over a period of time.</p>
+        <h3 class="w3-wide"> <b>Advisor's Assistant:</b></h3><a> Minxue Chia(Masters)</a>
+        <div> .</div>
+
+          <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10710960_376349182524031_97794200905697877_n.jpg?_nc_cat=0&oh=53c312956778680cfc5c4fb11d2f4636&oe=5B4F5FAE" style="width:20%" align="center">
+          <p>Minxue Chia is currently a master's student at the Johns Hopkins University.</p>
+      </div>
   </div>
 
 <!-- End Page Content -->
