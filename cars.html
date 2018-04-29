@@ -17,6 +17,23 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-color: "white";
+
+    /* Full height */
+    height: 100px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 <body>
 
@@ -106,14 +123,10 @@ body {font-family: "Lato", sans-serif}
   <h1 class="w3-wide w3-center"> List of Cars: </h1>
     <h2 class="w3-wide"> Fast and Ferrous (2018)</h2>
       <img src="./img/FastFerrous.png" style="width:90%">
-      <p align="right"> .</p>
-      <p align="right"> .</p>
-      <p align="right"> .</p>
+      <div class="parallax"></div>
     <h2 class="w3-wide"> Ronny D-iesel (2017)</h2>
       <img src="./img/RonnyD.png" style="width:90%">
-      <p align="right"> .</p>
-      <p align="right"> .</p>
-      <p align="right"> .</p>
+      <div class="parallax"></div>
     <h2 class="w3-wide"> Rachel Reichner (2016)</h2>
 
 
