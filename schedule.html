@@ -23,11 +23,11 @@ body {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
 
-    <div class="w3-dropdown-hover w3-hide-small">
+    <div class="w3-dropdown-hover w3-hide-small w3-alighn-left">
       <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="https://drive.google.com/drive/u/0/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc" class="w3-bar-item w3-button">Google Docs</a>
@@ -63,9 +63,9 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">EVENTS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="events.html" class="w3-bar-item w3-button">Design Day 2017</a>
-        <a href="events.html" class="w3-bar-item w3-button">AIChe Competition 2018</a>
-        <a href="events.html" class="w3-bar-item w3-button">Design Day 2018</a>
+        <a href="" class="w3-bar-item w3-button">Design Day 2017</a>
+        <a href="" class="w3-bar-item w3-button">AIChe Competition 2018</a>
+        <a href="" class="w3-bar-item w3-button">Design Day 2018</a>
       </div>
     </div>
 
@@ -86,13 +86,13 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-bar-item w3-button w3-padding-medium w3-hide-small w3-right">
       <a href="https://github.com/JHU-Chem-E-Car" class="fa fa-github"></a>
     </div>
-    
+
   </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">HOME</a>
     <a href="links.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">LINKS</a>
     <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">SCHEDULE</a>
     <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">TEAM</a>
@@ -126,3 +126,32 @@ body {font-family: "Lato", sans-serif}
 <footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
   <p class="w3-medium">© May, 2018 by L.M.R</p>
 </footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
