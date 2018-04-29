@@ -77,6 +77,8 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
 
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWord()">REPORTS</a>
+
     <div class="w3-bar-item w3-padding-small w3-hide-small w3-right">
       <a href="https://www.facebook.com/JHUChemECar/?ref=bookmarks" class="w3-bar-item w3-button"><img src="http://mainsage.com/wp-content/uploads/2018/02/logo-facebook-blanc-150x150.png" style=width:18px;height=18px></a>
       <a href="https://github.com/JHU-Chem-E-Car" class="w3-bar-item w3-button"><img src="https://www.shareicon.net/data/2048x2048/2016/06/20/606964_github_4096x4096.png" style=width:22px;height=22px></a>
@@ -208,6 +210,26 @@ function carousel() {
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 4000);
+}
+//Password protected section
+function passWord() {
+  var testV = 1;
+  var pass1 = prompt('Please Enter Your Password',' ');
+  while (testV < 3) {
+    if (!pass1)
+      history.go(-1);
+    if (pass1.toLowerCase() == "jhcar18") {
+      alert('That is correct! Click OK to proceed.');
+      window.open('reports.html');
+      break;
+}
+  testV+=1;
+  var pass1 =
+  prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+  if (pass1.toLowerCase()!="password" & testV ==3)
+    history.go(-1);
+    return " ";
 }
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
