@@ -2,12 +2,15 @@
 <html>
 <title>JHU-ChemE-Car</title>
 
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 <link rel="manifest" href="./img/site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +20,23 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./img/Group (1).jpg");
+
+    /* Full height */
+    height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 <body>
 
@@ -27,19 +47,9 @@ body {font-family: "Lato", sans-serif}
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
 
-    <div class="w3-dropdown-hover w3-hide-small w3-alighn-left">
-      <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="https://drive.google.com/drive/u/0/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc" class="w3-bar-item w3-button">Google Docs</a>
-        <a href="https://engineering.jhu.edu/chembe/" class="w3-bar-item w3-button">Johns Hopkins ChemBE</a>
-        <a href="https://www.aiche.org/community/students/chem-e-car" class="w3-bar-item w3-button">AIChe Website</a>
-        <a href="https://www.aiche.org/community/students/chem-e-car-competition-rules/safety-training-test" class="w3-bar-item w3-button">Safety Test</a>
-      </div>
-    </div>
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
 
     <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
-
-    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
 
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">REACTIONS <i class="fa fa-caret-down"></i></button>
@@ -60,12 +70,24 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
 
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWord()">REPORTS</a>
+
+    <div class="w3-dropdown-hover w3-hide-small w3-alighn-left">
+      <button class="w3-padding-large w3-button" title="More">LINKS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWordD()">Google Drive</a>
+        <a href="https://engineering.jhu.edu/chembe/" class="w3-bar-item w3-button">Johns Hopkins ChemBE</a>
+        <a href="https://www.aiche.org/community/students/chem-e-car" class="w3-bar-item w3-button">AIChe Website</a>
+        <a href="https://www.aiche.org/community/students/chem-e-car-competition-rules/safety-training-test" class="w3-bar-item w3-button">Safety Test</a>
+      </div>
+    </div>
+
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">EVENTS <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="" class="w3-bar-item w3-button">Design Day 2017</a>
-        <a href="" class="w3-bar-item w3-button">AIChe Competition 2018</a>
-        <a href="" class="w3-bar-item w3-button">Design Day 2018</a>
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2017</a>
+        <a href="events.html" class="w3-bar-item w3-button">AIChe Competition 2018</a>
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2018</a>
       </div>
     </div>
 
@@ -73,18 +95,14 @@ body {font-family: "Lato", sans-serif}
       <button class="w3-padding-large w3-button" title="More">SPONSORS<i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="http://www.jhuapl.edu/" class="w3-bar-item w3-button">Applied Physics Laboratory</a>
-        <a href="https://www.baesystems.com/en/home" class="w3-bar-item w3-button">BAE</a>
       </div>
     </div>
-
-    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWord()">REPORTS</a>
 
     <div class="w3-bar-item w3-padding-small w3-hide-small w3-right">
       <a href="https://www.facebook.com/JHUChemECar/?ref=bookmarks" class="w3-bar-item w3-button"><img src="http://mainsage.com/wp-content/uploads/2018/02/logo-facebook-blanc-150x150.png" style=width:18px;height=18px></a>
       <a href="https://github.com/JHU-Chem-E-Car" class="w3-bar-item w3-button"><img src="https://www.shareicon.net/data/2048x2048/2016/06/20/606964_github_4096x4096.png" style=width:22px;height=22px></a>
       <a href="#" class="w3-bar-item w3-button"><img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/white-twitter-logo-transparent-background-1.png" style=width:20px;height=20px></a>
     </div>
-
   </div>
 </div>
 
@@ -239,6 +257,25 @@ function myFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+}
+function passWordD() {
+  var testV = 1;
+  var pass1 = prompt('The Drive is protected. Please Enter Your Password',' ');
+  while (testV < 3) {
+    if (!pass1)
+      history.go(-1);
+    if (pass1.toLowerCase() == "jhcar18") {
+      alert('That is correct! Click OK to proceed.');
+      window.open('https://drive.google.com/drive/u/0/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc');
+      break;
+}
+  testV+=1;
+  var pass1 =
+  prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+  if (pass1.toLowerCase()!="password" & testV ==3)
+    history.go(-1);
+    return " ";
 }
 </script>
 
