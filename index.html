@@ -23,7 +23,6 @@ body {font-family: "Lato", sans-serif}
 body, html {
     height: 100%;
 }
-
 .parallax {
     /* The image used */
     background-image: url("./img/Group (1).jpg");
@@ -36,6 +35,11 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+@media only screen and (max-width:749px) {
+  .parallax {
+   background-attachment: inherit;
+ }
 }
 </style>
 <body>
