@@ -20,6 +20,7 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.IntroMobile {display: none}
 body, html {
     height: 100%;
 }
@@ -40,6 +41,8 @@ body, html {
   .parallax {
    background-attachment: inherit;
  }
+  .IntroDesktop {display: none}
+  .IntroMobile {display: block}
 }
 </style>
 <body>
@@ -131,9 +134,15 @@ body, html {
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <div class="w3-row w3-padding-24 w3-xlarge">
+  <div class="IntroMobile w3-row w3-xlarge" id="IntroMobile">
+      <h1 class="w3-wide w3-center">Johns Hopkins</h1>
+      <h1 class="w3-wide w3-center">ChemE-Car</h1>
+      <p class="w3-center">Applied Science and Engineering</p>
+  </div>
+
+  <div class="IntroDesktop w3-row w3-padding-24 w3-xlarge">
       <h1 class="w3-wide w3-center">Johns Hopkins University ChemE-Car</h1>
-      <p class="w3-center">Science and Engineering at Work</p>
+      <p class="w3-center">Applied Science and Engineering</p>
   </div>
 
   <!-- Automatic Slideshow Images -->
