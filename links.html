@@ -43,7 +43,8 @@ body, html {
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="openSidebar()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="index.html" title="Toggle Navigation Menu"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
 
@@ -107,15 +108,19 @@ body, html {
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">HOME</a>
-  <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">TEAM</a>
-  <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">SCHEDULE</a>
-  <a href="reactions.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">REACTIONS</a>
-  <a href="cars.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">CARS</a>
-  <a href="links.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">LINKS</a>
-  <a href="events.html" class="w3-bar-item w3-button w3-padding-large w3-mobile">EVENTS</a>
-  <a href="reports.html" onClick="passWordD()" class="w3-bar-item w3-button w3-padding-large w3-mobile">REPORTS</a>
+<div id="mySidebar" class="w3-sidebar w3-bar-block w3-display-topright" style="width:28%;height:52%;display:none">
+  <div class="w3-black" style"display:none">
+    <a href="javascript:void(0)" onclick="closeSidebar()"
+    class="w3-button w3-display-topright w3-small">x</a>
+  </div>
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+  <a href="team.html" class="w3-bar-item w3-button w3-padding-large">Team</a>
+  <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large">Schedule</a>
+  <a href="reactions.html" class="w3-bar-item w3-button w3-padding-large">Reactions</a>
+  <a href="cars.html" class="w3-bar-item w3-button w3-padding-large">Cars</a>
+  <a href="links.html" class="w3-bar-item w3-button w3-padding-large">Links</a>
+  <a href="events.html" class="w3-bar-item w3-button w3-padding-large">Events</a>
+  <a href="reports.html" onClick="passWordD()" class="w3-bar-item w3-button w3-padding-large">Reports</a>
 </div>
 
 
@@ -211,6 +216,13 @@ function passWordD() {
   if (pass1.toLowerCase()!="password" & testV ==3)
     history.go(-1);
     return " ";
+}
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
 }
 </script>
 
