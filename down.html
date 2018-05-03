@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<title>JHU-ChemE-Car</title>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+<link rel="manifest" href="./img/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./img/Group (1).jpg");
+
+    /* Full height */
+    height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="openSidebar()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="index.html" title="Toggle Navigation Menu"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
+
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
+    <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ANNOUNCEMENTS <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
+    <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">REACTIONS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="reactions.html" class="w3-bar-item w3-button">Stopping: Iodine Clock</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Stopping: Hydrogen Decomposition</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Propulsion: Thermoelectric battery</a>
+        <a href="reactions.html" class="w3-bar-item w3-button">Propulsion: Aluminum-Air Battery</a>
+      </div>
+    </div>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">CARS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="cars.html" class="w3-bar-item w3-button">Fast and Ferrous</a>
+        <a href="cars.html" class="w3-bar-item w3-button">Ronny D-iesel</a>
+        <a href="cars.html" class="w3-bar-item w3-button">Rachel Reichner</a>
+      </div>
+    </div>
+
+    <a href= "reports.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REPORTS <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px></a>
+
+    <div class="w3-dropdown-hover w3-hide-small w3-alighn-left">
+      <button class="w3-padding-large w3-button" title="More"><a href="links.html" style="text-decoration:none">LINKS</a> <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a class="w3-bar-item w3-button w3-hide-small" onClick="passWord()">Google Drive <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:7px;height=7px=></a>
+        <a href="https://engineering.jhu.edu/chembe/" class="w3-bar-item w3-button">Johns Hopkins ChemBE</a>
+        <a href="https://www.aiche.org/community/students/chem-e-car" class="w3-bar-item w3-button">AIChe Website</a>
+        <a href="https://www.aiche.org/community/students/chem-e-car-competition-rules/safety-training-test" class="w3-bar-item w3-button">Safety Test</a>
+        <a href="down.html" class="w3-bar-item w3-button">Make This an App<img src="https://www.freeiconspng.com/uploads/white-download-icon-png-32.png" style=width:25px;height=25px></a>
+      </div>
+    </div>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">EVENTS <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2017</a>
+        <a href="events.html" class="w3-bar-item w3-button">AIChe Competition 2018</a>
+        <a href="events.html" class="w3-bar-item w3-button">Design Day 2018</a>
+      </div>
+    </div>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SPONSORS<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="http://www.jhuapl.edu/" class="w3-bar-item w3-button">Applied Physics Laboratory</a>
+      </div>
+    </div>
+
+    <div class="w3-bar-item w3-padding-small w3-hide-small w3-right">
+      <a href="admin.html" class="w3-bar-item w3-button w3-padding-small"><img src="http://www.thepixelfarm.co.uk/wp-content/uploads/2016/05/admin_v01D_support.png" style="width:27px;height=27px">Sign in</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Navbar on small screens -->
+<div id="mySidebar" class="w3-sidebar w3-bar-block w3-display-topright w3-black" style="width:35%;height:65%;display:none">
+  <div class="w3-black" style"display:none">
+    <a href="javascript:void(0)" onclick="closeSidebar()"
+    class="w3-button w3-display-topright w3-small">x</a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large"> </a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large"> </a>
+  <a href="admin.html" class="w3-bar-item w3-button w3-padding-small"><img src="http://www.thepixelfarm.co.uk/wp-content/uploads/2016/05/admin_v01D_support.png" style="width:27px;height=27px">Sign in</a>
+  <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large">Notifications <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+  <a href="team.html" class="w3-bar-item w3-button w3-padding-large">Team</a>
+  <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large">Schedule <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+  <a href="reactions.html" class="w3-bar-item w3-button w3-padding-large">Reactions</a>
+  <a href="cars.html" class="w3-bar-item w3-button w3-padding-large">Cars</a>
+  <a href="links.html" class="w3-bar-item w3-button w3-padding-large">Links</a>
+  <a href="events.html" class="w3-bar-item w3-button w3-padding-large">Events</a>
+  <a href="reports.html" class="w3-bar-item w3-button w3-padding-large">Reports <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <h1 align="center">Get the App!</h1>
+
+<!-- End Page Content -->
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/JHUChemECar/?ref=bookmarks" class="w3-bar-item w3-button"><img src="https://www.shareicon.net/download/2015/08/13/84750_facebook.ico" style=width:38px;height=38px></a>
+  <a href="https://github.com/JHU-Chem-E-Car" class="w3-bar-item w3-button"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" style=width:42px;height=42px></a>
+  <a href="#" class="w3-bar-item w3-button"><img src="http://goinkscape.com/wp-content/uploads/2015/07/twitter-logo-final.png" style=width:40px;height=40px></a>
+  <p class="w3-medium">Copyright © Johns Hopkins University May, 2018</p>
+  <p class="w3-medium">Site developed by <a href="http://luisrodriguezeng.com/">Luis Rodriguez</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+//Password protected section
+function passWord() {
+  var testV = 1;
+  var pass1 = prompt('Please Enter Your Password','');
+  while (testV < 3) {
+    if (!pass1)
+      history.go(-1);
+    if (pass1.toLowerCase() == "jhcar18") {
+      alert('That is correct! Click OK to proceed.');
+      window.open('reports.html');
+      break;
+}
+  testV+=1;
+  var pass1 =
+  prompt('Access Denied - Password Incorrect, Please Try Again.','');
+}
+  if (pass1.toLowerCase()!="password" & testV ==3)
+    history.go(-1);
+    return "";
+}
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function passWordD() {
+  var testV = 1;
+  var pass1 = prompt('The Drive is protected. Please Enter Your Password','');
+  while (testV < 3) {
+    if (!pass1)
+      history.go(-1);
+    if (pass1.toLowerCase() == "jhcar18") {
+      alert('That is correct! Click OK to proceed.');
+      window.open('https://drive.google.com/drive/u/0/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc');
+      break;
+}
+  testV+=1;
+  var pass1 =
+  prompt('Access Denied - Password Incorrect, Please Try Again.','');
+}
+  if (pass1.toLowerCase()!="password" & testV ==3)
+    history.go(-1);
+    return "";
+}
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
