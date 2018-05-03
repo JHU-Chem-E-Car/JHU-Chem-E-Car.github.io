@@ -57,9 +57,9 @@ body, html {
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="index.html" title="Toggle Navigation Menu"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
-    <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ANNOUNCEMENTS</a>
+    <a onClick="passWordA()"class="w3-bar-item w3-button w3-padding-large w3-hide-small">ANNOUNCEMENTS</a>
     <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
-    <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
+    <a onClick="passWordS()" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE</a>
 
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">REACTIONS <i class="fa fa-caret-down"></i></button>
@@ -80,12 +80,12 @@ body, html {
       </div>
     </div>
 
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWord()">REPORTS</a>
+    <a href= "reports.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REPORTS</a>
 
     <div class="w3-dropdown-hover w3-hide-small w3-alighn-left">
       <button class="w3-padding-large w3-button" title="More"><a href="links.html" style="text-decoration:none">LINKS</a> <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWordD()">Google Drive</a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick="passWord()">Google Drive</a>
         <a href="https://engineering.jhu.edu/chembe/" class="w3-bar-item w3-button">Johns Hopkins ChemBE</a>
         <a href="https://www.aiche.org/community/students/chem-e-car" class="w3-bar-item w3-button">AIChe Website</a>
         <a href="https://www.aiche.org/community/students/chem-e-car-competition-rules/safety-training-test" class="w3-bar-item w3-button">Safety Test</a>
@@ -131,7 +131,7 @@ body, html {
   <a href="cars.html" class="w3-bar-item w3-button w3-padding-large">Cars</a>
   <a href="links.html" class="w3-bar-item w3-button w3-padding-large">Links</a>
   <a href="events.html" class="w3-bar-item w3-button w3-padding-large">Events</a>
-  <a href="reports.html" onClick="passWord()" class="w3-bar-item w3-button w3-padding-large">Reports</a>
+  <a href="reports.html" class="w3-bar-item w3-button w3-padding-large">Reports</a>
 </div>
 
 <!-- Page content -->
@@ -214,7 +214,7 @@ function myFunction() {
         history.go(-1);
       if (pass1.toLowerCase() == "jhcar18") {
         alert('That is correct! Click OK to proceed.');
-        window.open('reports.html');
+        window.open('https://drive.google.com/drive/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc');
         break;
   }
     testV+=1;
@@ -223,26 +223,7 @@ function myFunction() {
   }
     if (pass1.toLowerCase()!="password" & testV ==3)
       history.go(-1);
-      return "";
-}
-  function passWordD() {
-    var testV = 1;
-    var pass1 = prompt('The Drive is protected. Please Enter Your Password','');
-    while (testV < 3) {
-      if (!pass1)
-        history.go(-1);
-      if (pass1.toLowerCase() == "jhcar18") {
-        alert('That is correct! Click OK to proceed.');
-        window.open('https://drive.google.com/drive/u/0/folders/0B27ZGgANavj4cmcyZFBMWDB2eWc');
-        break;
-  }
-    testV+=1;
-    var pass1 =
-    prompt('Access Denied - Password Incorrect, Please Try Again.','');
-  }
-    if (pass1.toLowerCase()!="password" & testV ==3)
-      history.go(-1);
-      return "";
+      return " ";
 }
   function openSidebar() {
     document.getElementById("mySidebar").style.display = "block";
