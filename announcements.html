@@ -37,6 +37,25 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  background-color: Black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 </style>
 <body onload="passWord();">
 
@@ -128,7 +147,8 @@ body, html {
 
 
 <!-- Page content -->
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:450px" id="band">
+<div id = "Top" class="w3-container w3-content w3-center w3-padding-64" style="max-width:450px" id="band">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <h1 align="center">General Announcements</h1>
   <p align="center">______________________________________________________________</p>
 
@@ -211,6 +231,16 @@ body, html {
 </footer>
 
 <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
@@ -277,6 +307,12 @@ function openSidebar() {
 
 function closeSidebar() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 </script>
 
