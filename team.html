@@ -37,6 +37,25 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  background-color: Black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
 </style>
 <body>
 
@@ -47,7 +66,7 @@ body, html {
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="index.html" title="Toggle Navigation Menu"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="http://www.spieuk.com/media/filer_public/24/91/2491bc6e-ec30-4c92-8d34-bbdbef2fd7de/home_icon.png" style=width:22px;height=22px></a>
-    <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM LOG<img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+    <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM LOG <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
     <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
     <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SCHEDULE <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
 
@@ -115,7 +134,7 @@ body, html {
   <a href="#" class="w3-bar-item w3-button w3-padding-large"> </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large"> </a>
   <a href="admin.html" class="w3-bar-item w3-button w3-padding-small"><img src="http://www.thepixelfarm.co.uk/wp-content/uploads/2016/05/admin_v01D_support.png" style="width:27px;height=27px">Sign in</a>
-  <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large">Team Log<img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
+  <a href="announcements.html" class="w3-bar-item w3-button w3-padding-large">Team Log <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
   <a href="team.html" class="w3-bar-item w3-button w3-padding-large">Team</a>
   <a href="schedule.html" class="w3-bar-item w3-button w3-padding-large">Schedule <img src="http://newsmembres.rotary1720.org/images/cadenas.png" style=width:5px;height=5px=></a>
   <a href="reactions.html" class="w3-bar-item w3-button w3-padding-large">Reactions</a>
@@ -128,8 +147,9 @@ body, html {
 
 
 <!-- Page content -->
-<div class="w3-content w3-center" style="max-width:2000px;margin-top:46px">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<div class="w3-content w3-center" style="max-width:2000px;margin-top:46px">
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
       <h1 class="w3-wide">Our Team</h1>
 
@@ -218,12 +238,23 @@ body, html {
 <footer class="w3-container w3-center w3-opacity w3-light-grey w3-xlarge">
   <a href="https://www.facebook.com/JHUChemECar/?ref=bookmarks" class="w3-bar-item w3-button"><img src="https://www.shareicon.net/download/2015/08/13/84750_facebook.ico" style=width:38px;height=38px></a>
   <a href="https://github.com/JHU-Chem-E-Car" class="w3-bar-item w3-button"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" style=width:42px;height=42px></a>
-  <a href="#" class="w3-bar-item w3-button"><img src="http://goinkscape.com/wp-content/uploads/2015/07/twitter-logo-final.png" style=width:40px;height=40px></a>
+  <a href="https://twitter.com/JHU_ChemBE?lang=en" class="w3-bar-item w3-button"><img src="http://goinkscape.com/wp-content/uploads/2015/07/twitter-logo-final.png" style=width:40px;height=40px></a>
   <p class="w3-medium">Copyright © Johns Hopkins University May, 2018</p>
   <p class="w3-medium">Site developed by <a href="http://luisrodriguezeng.com/">Luis Rodriguez</a></p>
 </footer>
 
 <script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
 carousel();
@@ -292,6 +323,11 @@ function openSidebar() {
 
 function closeSidebar() {
   document.getElementById("mySidebar").style.display = "none";
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 </script>
 
