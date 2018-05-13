@@ -235,11 +235,13 @@ span.psw {
 
 <!--Sign-in content -->
 <div id="id01" class="modal">
-
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" action="">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="http://www.thepixelfarm.co.uk/wp-content/uploads/2016/05/admin_v01D_support.png" style="width:100px;height=100px">
+    </div>
+    <div class="imgcontainer">
+      <label align="center"><b>Admin Use Only</b></label>
     </div>
 
     <div class="container">
@@ -248,15 +250,12 @@ span.psw {
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-      <button type="submit" class="w3-button w3-blue w3-block w3-round-large">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+      <button type="submit" onclick="window.location.href = 'http://jhuchemecar.com/admin.html'" class="w3-button w3-blue w3-block w3-round-large">Login</button>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-round-large">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <button type="button" onclick="forgot()" class="w3-button w3-gray w3-round-large w3-right">Forgot Password</button>
     </div>
   </form>
 </div>
@@ -355,7 +354,9 @@ function myFunction() {
   function openSidebar() {
     document.getElementById("mySidebar").style.display = "block";
 }
-
+function forgot() {
+      alert('If you have forgotten your username and password please email us at: jhuchemecarteam@gmail.com');
+}
   function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
