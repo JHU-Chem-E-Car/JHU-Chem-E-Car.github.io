@@ -25,6 +25,8 @@ body, html {
     height: 100%;
 }
 </style>
+<body onload="passWordA();">
+
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -119,11 +121,22 @@ body, html {
       <h1 class="w3-wide w3-center">Admin Settings</h1>
       <h5 class="w3-center">Maintain Your Website!</h5>
       <p align="center">______________________________________________________________</p>
-      <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>Under Development</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
 
   <!-- Update Announcements -->
   <div class="w3-container w3-content w3-center" style="max-width:800px" id="band">
-    <h2 class="w3-wide"> Update Announcements:</h2>
+    <h2 class="w3-wide"> Update Announcements: </h2>
+    <p align="center" style="margin-bottom:30px">___________________________________________</p>
+    <form id="fr1">
+      <label>Subject:</label>
+      <input type="text" id="tb1" value="Team Log Update"/>
+      <label>Author:</label>
+      <input type="text" id="tb3" value="Team Leaders"/>
+      <div class="w3-left" style="margin-top:20px"><label>Message:</label></div>
+      <div class="w3-center">
+        <textarea font-size="12" style="margin-top:35px" id="tb2" cols="50" rows="5">The Team Log has been updated. Make sure to check it out at: http://jhuchemecar.com/announcements.html Thank you Team!</textarea>
+      </div>
+      <input type="button" id="bt1" value="Update" class="w3-button w3-blue w3-block w3-round-large w3-right" style="max-width:120px"/>
+    </form>
   </div>
 
   <!-- Update Events-->
@@ -212,6 +225,14 @@ function passWordA() {
   function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
+$(document).ready(function() {
+    $('#bt1').click(function() {
+        $('#fr1').attr('action',
+                       'mailto:lrodri729@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());
+        $('#fr1').submit();
+    });
+});
 
 </script>
 
